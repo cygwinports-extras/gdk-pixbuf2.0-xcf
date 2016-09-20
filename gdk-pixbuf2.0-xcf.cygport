@@ -1,0 +1,11 @@
+NAME="gdk-pixbuf2.0-xcf"
+VERSION=0.0.1
+RELEASE=1.20120530gitb037c59
+CATEGORY="Graphics"
+SUMMARY="XCF (GIMP format) loader for GdkPixbuf"
+DESCRIPTION="io-xcf is a gdk-pixbuf loader for the xcf (The Gimp) files."
+HOMEPAGE="https://gitorious.org/xcf-pixbuf-loader/mainline.git"
+SRC_URI="${HOMEPAGE}/?a=snapshot;h=${RELEASE#*git};sf=tgz#/xcf-pixbuf-loadermainline-${RELEASE#*git}.tar.gz"
+SRC_DIR="xcf-pixbuf-loadermainline-${RELEASE#*git}"
+
+CYGCONF_ARGS="--libdir=$($PKG_CONFIG --variable=gdk_pixbuf_moduledir gdk-pixbuf-2.0)"
